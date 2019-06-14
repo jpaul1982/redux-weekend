@@ -15,9 +15,8 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
-        {/* Route for the 'How are you feeling' page */}
-        <Route path='/feeling' component={Feeling}/>
-        {}
+         {/* MAKES FEELINGS ROUTE HOMEPAGE */}
+         <Route path="/" exact component={Feeling}/>
       </div>
       </Router>
     );

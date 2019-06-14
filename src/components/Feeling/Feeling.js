@@ -7,7 +7,7 @@ import './Feeling.css';
 class Feeling extends Component {
 
     handleClick = () => {
-        this.props.history.push('/feeling') // change to next component
+        this.props.history.push('/understanding') // change to next component
     }                                        //Feeling should be home page
 
     render() {
@@ -15,7 +15,7 @@ class Feeling extends Component {
             <main>
                 <div className='query'>
             <h1>How are you feeling today?</h1>
-            <input type='number'></input><button onClick={this.handleClick}>Next</button>
+            <input type='number' min='1' max='5'></input><button onClick={this.handleClick}>Next</button>
 
                 </div>
                 <div className='review'>
