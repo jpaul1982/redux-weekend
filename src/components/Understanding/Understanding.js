@@ -28,11 +28,11 @@ class Understanding extends Component {
             <main>
                 <div className='query'>
                     <h1>How well are you understanding the content?</h1>
+                    <button onClick={this.goBack}>Back</button>
                     <input type='number' min='1' max='5'
                         value={this.state.understanding}
                         onChange={this.handleChange}>
                     </input>
-                    <button onClick={this.goBack}>Back</button>
                     <button onClick={this.handleClick}>Next</button>
                     <ul className='reviewList'>
                         <ReviewBody />
