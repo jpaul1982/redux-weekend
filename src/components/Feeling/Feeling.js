@@ -35,6 +35,8 @@ class Feeling extends Component {
                         value={this.state.feeling} type='number' min='1' max='5'>
                     </input>
                     <button onClick={this.handleClick}>Next</button>
+                    </div>
+                    <div>
                     <ul className='reviewList'>
                         <ReviewBody />
                     </ul>

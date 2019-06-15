@@ -24,20 +24,23 @@ class Comments extends Component {
     }
     render() {
         return (
+            <main>
+                <div className='reviewList'>
+                    <h1>Any comments you want to leave?</h1>
+                    <button onClick={this.goBack}>Back</button>
+                    <textarea type='text' max='120' onChange={this.handleChange}
+                        value={this.state.comments}>
+                    </textarea>
 
-            <div>
-                <h1>Any comments you want to leave?</h1>
-                <button onClick={this.goBack}>Back</button>
-                <textarea type='text' max='120' onChange={this.handleChange}
-                    value={this.state.comments}>
-                </textarea>
-                
-                <button onClick={this.handleClick}>Next</button>
-                <ul className='reviewList'>
-                    <ReviewBody />
-                </ul>
+                    <button onClick={this.handleClick}>Next</button>
+                </div>
+                <div>
+                    <ul className='reviewList'>
+                        <ReviewBody />
+                    </ul>
 
-            </div>
+                </div>
+            </main>
 
         )
     }

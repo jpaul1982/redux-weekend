@@ -27,7 +27,7 @@ class Supported extends Component {
     render() {
         return (
             <main>
-                <div>
+                <div className='query'>
                     <h1>How well are you being supported?</h1>
                     <button onClick={this.goBack}>Back</button>
                     <input type='number' min='1' max='5'
@@ -35,6 +35,8 @@ class Supported extends Component {
                         onChange={this.handleChange}>
                     </input>
                     <button onClick={this.handleClick}>Next</button>
+                    </div>
+                    <div>
                     <ul className='reviewList'>
                         <ReviewBody />
                     </ul>

@@ -27,7 +27,7 @@ class Review extends Component {
 
 render() {
     return (
-        <>
+        <div className='query'>
             <h1>Review Your Feedback</h1>
             <button onClick={this.handleClick}>Submit</button>
             <button onClick={this.goBack}>Back</button>
@@ -38,7 +38,7 @@ render() {
                 <li>Comments: {this.props.reduxState.feedbackReducer.comments}</li>
             </ul>
 
-        </>
+        </div>
     )
 }
 }

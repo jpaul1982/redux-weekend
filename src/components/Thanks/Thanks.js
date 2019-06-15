@@ -16,10 +16,9 @@ class Thanks extends Component {
     render() {
         return (
             <main>
-                <div>
+                <div className="query">
                     <h1>Feedback!</h1>
-                </div>
-                <div>
+               
                     <h2>Thank You! </h2>
                     <button onClick={this.handleClick}>Leave New Feedback</button>
                 </div>

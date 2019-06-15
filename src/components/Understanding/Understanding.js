@@ -34,6 +34,8 @@ class Understanding extends Component {
                         onChange={this.handleChange}>
                     </input>
                     <button onClick={this.handleClick}>Next</button>
+                    </div>
+                    <div>
                     <ul className='reviewList'>
                         <ReviewBody />
                     </ul>
