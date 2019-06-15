@@ -23,16 +23,19 @@ class Comments extends Component {
 
     render() {
         return (
-         
-                <div>
-                    <h1>Any comments you want to leave?</h1>
-                    <input type='text' max='120'></input><button onClick={this.handleClick}>Next</button>
-                    <ul className='reviewList'>
-                        <ReviewBody />
-                    </ul>
 
-                </div>
-            
+            <div>
+                <h1>Any comments you want to leave?</h1>
+                <input type='text' max='120' onChange={this.handleChange}
+                    value={this.state.comments}>
+                </input>
+                <button onClick={this.handleClick}>Next</button>
+                <ul className='reviewList'>
+                    <ReviewBody />
+                </ul>
+
+            </div>
+
         )
     }
 }

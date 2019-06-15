@@ -25,7 +25,11 @@ class Supported extends Component {
             <main>
                 <div>
                     <h1>How well are you being supported?</h1>
-                    <input type='number' min='1' max='5'></input><button onClick={this.handleClick}>Next</button>
+                    <input type='number' min='1' max='5'
+                        value={this.state.supported}
+                        onChange={this.handleChange}>
+                    </input>
+                    <button onClick={this.handleClick}>Next</button>
                     <ul className='reviewList'>
                         <ReviewBody />
                     </ul>
