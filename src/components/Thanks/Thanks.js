@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Thanks extends Component {
+    
+    // handleClick = () => {
+    //     this.props.history.push('/thanks')
+    // }
+    
     render() {
         return (
             <main>

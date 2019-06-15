@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Feeling.css';
 import ReviewBody from '../ReviewBody/ReviewBody';
-import { thisTypeAnnotation } from '@babel/types';
 
 
 
@@ -15,7 +13,7 @@ class Feeling extends Component {
 
     handleClick = () => {
         this.props.history.push('/understanding'); // BRINGS USER TO NEXT PAGE
-        this.props.dispatch({ type: `SUBMIT_FEELINGS`, payload: this.state })
+        this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
         console.log(this.state);
 
     }

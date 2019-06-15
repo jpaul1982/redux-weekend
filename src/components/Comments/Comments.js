@@ -10,7 +10,7 @@ class Comments extends Component {
 
     handleClick = () => {
         this.props.history.push('/review') // BRINGS USER TO NEXT PAGE
-        this.props.dispatch({ type: `SUBMIT_SUPPORTED`, payload: this.state })
+        this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
         console.log(this.state);
 
     }

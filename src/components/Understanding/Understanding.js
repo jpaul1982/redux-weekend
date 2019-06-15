@@ -10,7 +10,7 @@ class Understanding extends Component {
 
     handleClick = () => {
         this.props.history.push('/supported') // BRINGS USER TO NEXT PAGE
-        this.props.dispatch({ type: `SUBMIT_UNDERSTANDING`, payload: this.state })
+        this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
         console.log(this.state);
 
     }

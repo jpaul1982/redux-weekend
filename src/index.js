@@ -7,25 +7,16 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 
-const feelingReducer = (state = {}, action) => {
-    if (action.type === `SUBMIT_FEELINGS`) {
+const feedbackReducer = (state = {}, action) => {
+    if (action.type === `SUBMIT_FEEDBACK`) {
         console.log(action.payload);
         return {...state, ...action.payload};
-         } else if (action.type === `SUBMIT_UNDERSTANDING`) {
-        console.log(action.payload);
-        return {...state, ...action.payload};
-    } else if (action.type === `SUBMIT_SUPPORTED`) {
-        console.log(action.payload);
-        return {...state, ...action.payload};
-    } else if (action.type === `SUBMIT COMMENTS`) {
-        console.log(action.payload);
-        return {...state, ...action.payload};
-    } 
-    return state;
+    } return state;
 }
+
   const storeInstance = createStore(
     combineReducers({
-        feelingReducer,
+        feedbackReducer,
     }),
     applyMiddleware(logger),
 );
