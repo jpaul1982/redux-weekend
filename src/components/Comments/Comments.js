@@ -8,9 +8,9 @@ class Comments extends Component {
     render() {
         return (
             <main>
-                <div className='query'>
+                <div>
                     <h1>Any comments you want to leave?</h1>
-                    <input type='number' min='1' max='5'></input><button>Next</button>
+                    <input type='text' max='120'></input><button>Next</button>
                     <ul className='reviewList'>
                         <ReviewBody />
                     </ul>

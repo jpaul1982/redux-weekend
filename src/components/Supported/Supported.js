@@ -11,7 +11,7 @@ class Supported extends Component {
     render() {
         return (
             <main>
-                <div className='query'>
+                <div>
                     <h1>How well are you being supported?</h1>
                     <input type='number' min='1' max='5'></input><button onClick={this.handleClick}>Next</button>
                     <ul className='reviewList'>
