@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
-
-// handleClick - this will send the post request to server 
-// with all data collected from review inputs. 
-
-
-
+ 
 class Review extends Component {
+    goBack = () => {
+        this.props.history.push('/comments')
+    }
 
     handleClick = () => {
         if (this.props.reduxState.feedbackReducer.feeling === "" ||
@@ -32,6 +30,7 @@ render() {
         <>
             <h1>Review Your Feedback</h1>
             <button onClick={this.handleClick}>Submit</button>
+            <button onClick={this.goBack}>Back</button>
             <ul>
                 <li>Feelings: {this.props.reduxState.feedbackReducer.feeling}</li>
                 <li>Understanding: {this.props.reduxState.feedbackReducer.understanding}</li>

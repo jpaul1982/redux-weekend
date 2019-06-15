@@ -19,6 +19,9 @@ class Understanding extends Component {
             understanding: event.target.value,
         })
     }
+    goBack = () => {
+        this.props.history.push('/')
+    }
 
     render() {
         return (
@@ -29,6 +32,7 @@ class Understanding extends Component {
                         value={this.state.understanding}
                         onChange={this.handleChange}>
                     </input>
+                    <button onClick={this.goBack}>Back</button>
                     <button onClick={this.handleClick}>Next</button>
                     <ul className='reviewList'>
                         <ReviewBody />

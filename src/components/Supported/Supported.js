@@ -20,6 +20,10 @@ class Supported extends Component {
         })
     }
 
+    goBack = () => {
+        this.props.history.push('/understanding')
+    }
+
     render() {
         return (
             <main>
@@ -29,6 +33,7 @@ class Supported extends Component {
                         value={this.state.supported}
                         onChange={this.handleChange}>
                     </input>
+                    <button onClick={this.goBack}>Back</button>
                     <button onClick={this.handleClick}>Next</button>
                     <ul className='reviewList'>
                         <ReviewBody />

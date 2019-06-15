@@ -19,6 +19,9 @@ class Comments extends Component {
             comments: event.target.value,
         })
     }
+    goBack = () => {
+        this.props.history.push('/supported')
+    }
 
 
     render() {
@@ -29,6 +32,7 @@ class Comments extends Component {
                 <input type='text' max='120' onChange={this.handleChange}
                     value={this.state.comments}>
                 </input>
+                <button onClick={this.goBack}>Back</button>
                 <button onClick={this.handleClick}>Next</button>
                 <ul className='reviewList'>
                     <ReviewBody />
