@@ -10,6 +10,13 @@ import axios from 'axios';
 class Review extends Component {
 
     handleClick = () => {
+        if (this.props.reduxState.feedbackReducer.feeling === "" ||
+        this.props.reduxState.feedbackReducer.understanding === "" ||
+        this.props.reduxState.feedbackReducer.supported === "" ||
+        this.props.reduxState.feedbackReducer.commments === "" 
+        ) {
+            alert("please fill out all fields");
+        } else 
         this.props.history.push('/thanks');
         axios({
             method: 'POST',
