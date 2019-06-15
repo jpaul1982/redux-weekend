@@ -4,8 +4,20 @@ import ReviewBody from '../ReviewBody/ReviewBody';
 
 class Understanding extends Component {
 
+    state = {
+        understanding: ''
+    }
+
     handleClick = () => {
-        this.props.history.push('/supported')
+        this.props.history.push('/supported') // BRINGS USER TO NEXT PAGE
+        this.props.dispatch({ type: `SUBMIT_UNDERSTANDING`, payload: this.state })
+        console.log(this.state);
+
+    }
+    handleChange = (event) => {
+        this.setState({
+            understanding: event.target.value,
+        })
     }
 
     render() {

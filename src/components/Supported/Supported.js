@@ -4,8 +4,20 @@ import ReviewBody from '../ReviewBody/ReviewBody';
 
 class Supported extends Component {
 
+    state = {
+        supported: ''
+    }
+
     handleClick = () => {
-        this.props.history.push('/comments')
+        this.props.history.push('/comments') // BRINGS USER TO NEXT PAGE
+        this.props.dispatch({ type: `SUBMIT_SUPPORTED`, payload: this.state })
+        console.log(this.state);
+
+    }
+    handleChange = (event) => {
+        this.setState({
+            supported: event.target.value,
+        })
     }
 
     render() {

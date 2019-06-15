@@ -14,7 +14,7 @@ class Feeling extends Component {
     }
 
     handleClick = () => {
-        this.props.history.push('/understanding');
+        this.props.history.push('/understanding'); // BRINGS USER TO NEXT PAGE
         this.props.dispatch({ type: `SUBMIT_FEELINGS`, payload: this.state })
         console.log(this.state);
 

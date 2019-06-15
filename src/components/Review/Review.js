@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+// handleClick - this will send the post request to server 
+// with all data collected from review inputs. 
 
 class Review extends Component {
     render() {
         return (
-            <main>
-                <div>
-                    <h1>Feedback!</h1>
-                </div>
-                <div>
-                    <h2>Thank You! </h2>
-                    <h2>Leave New Feedback</h2>
-                </div>
-            </main>
-
+            <>
+            <h1>Review Your Feedback</h1>
+            <button onClick={this.handleClick}>Submit</button>
+            </>
         )
     }
 }
+
+const mapReduxStateToProps = (reduxState) => ({
+    reduxState
+})
+
+export default connect(mapReduxStateToProps)(Review);

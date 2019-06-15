@@ -11,13 +11,43 @@ const feelingReducer = (state = 0, action) => {
     if (action.type === `SUBMIT_FEELINGS`) {
         console.log(action.payload);
         return action.payload;
+    } else if (action.type === `SUBMIT_UNDERSTANDING`) {
+        return [...state, action.payload];
+    } else if (action.type === `SUBMIT_SUPPORTED`) {
+        return action.payload;
+    } else if (action.type === `SUBMIT COMMENTS`) {
+        return action.payload;
+    } 
+    return state;
+} 
+// const understandingReducer = (state = 0, action) => {
+//     if (action.type === `SUBMIT_UNDERSTANDING`) {
+//         console.log(action.payload);
+//         return action.payload;
 
-    } return state
-}
+//     } return state
+// }
+// const supportedReducer = (state = 0, action) => {
+//     if (action.type === `SUBMIT_SUPPORTED`) {
+//         console.log(action.payload);
+//         return action.payload;
+
+//     } return state
+// }
+// const commentsReducer = (state = '', action) => {
+//     if (action.type === `SUBMIT_COMMENTS`) {
+//         console.log(action.payload);
+//         return action.payload;
+
+//     } return state
+// }
 
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
+        // understandingReducer,
+        // supportedReducer,
+        // commentsReducer
     }),
     applyMiddleware(logger),
 );
