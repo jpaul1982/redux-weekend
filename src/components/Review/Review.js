@@ -13,14 +13,12 @@ class Review extends Component {
         this.props.history.push('/thanks');
         axios({
             method: 'POST',
-            url: '/api/order',
+            url: '/',
             data: this.props.reduxState.feedbackReducer
         }).then((response) => {
             console.log(response)
         })
-
-    
-}
+    }
 
 render() {
     return (

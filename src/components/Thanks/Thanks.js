@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Thanks extends Component {
-    
-    // handleClick = () => {
-    //     this.props.history.push('/thanks')
-    // }
-    
+
+    handleClick = () => {
+        this.props.history.push('/');
+        this.props.dispatch({
+            type: `CLEAR_STATE`,
+            payload: this.setState({
+
+            })
+        })
+    }
+
     render() {
         return (
             <main>
@@ -14,7 +21,7 @@ class Thanks extends Component {
                 </div>
                 <div>
                     <h2>Thank You! </h2>
-                    <h2>Leave New Feedback</h2>
+                    <button onClick={this.handleClick}>Leave New Feedback</button>
                 </div>
             </main>
 
@@ -22,4 +29,8 @@ class Thanks extends Component {
     }
 }
 
-export default Thanks;
+const mapReduxStateToProps = (reduxState) => ({
+    reduxState
+})
+
+export default connect(mapReduxStateToProps)(Thanks);

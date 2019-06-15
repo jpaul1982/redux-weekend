@@ -10,11 +10,14 @@ import registerServiceWorker from './registerServiceWorker';
 const feedbackReducer = (state = {}, action) => {
     if (action.type === `SUBMIT_FEEDBACK`) {
         console.log(action.payload);
-        return {...state, ...action.payload};
-    } return state;
+        return { ...state, ...action.payload };
+    } else if (action.type === `CLEAR_STATE`) {
+        return {};
+    }
+    return state
 }
 
-  const storeInstance = createStore(
+const storeInstance = createStore(
     combineReducers({
         feedbackReducer,
     }),
