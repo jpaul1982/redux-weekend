@@ -3,24 +3,21 @@ import { connect } from 'react-redux';
 import ReviewBody from '../ReviewBody/ReviewBody';
 
 class Comments extends Component {
-
     state = {
         comments: ''
     }
-
     handleClick = () => {
         this.props.history.push('/review') // BRINGS USER TO NEXT PAGE
-        this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
-        console.log(this.state);
-
+        this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })  // dispatches an action that will fire off all reducers. 
+        console.log(this.state); 
     }
-    handleChange = (event) => {
+    handleChange = (event) => {  // sets local state to targeted value
         this.setState({
             comments: event.target.value,
         })
     }
-    goBack = () => {
-        this.props.history.push('/supported')
+    goBack = () => {   
+        this.props.history.push('/supported') 
     }
     render() {
         return (

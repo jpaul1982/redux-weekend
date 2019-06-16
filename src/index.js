@@ -17,9 +17,16 @@ const feedbackReducer = (state = {}, action) => {
     return state
 }
 
+const adminReducer = (state = [], action) => {
+    if (action.type === `SET_ADMIN_PAGE`) {
+        console.log(action.payload);
+        return [...state,action.payload];
+     } return state;
+}
 const storeInstance = createStore(
     combineReducers({
         feedbackReducer,
+        adminReducer
     }),
     applyMiddleware(logger),
 );

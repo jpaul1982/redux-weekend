@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 body{
   margin: 20px;
 }
@@ -26,9 +27,11 @@ ul{
   list-style-type: none;
   font-size: 20px;
 }
+
 .link {
   color: white;
 }
+
  button {
    margin: 10px;
    box-shadow:5px 8px 20px -5px #222; 
@@ -44,9 +47,9 @@ ul{
  } 
 
  .reviewList {
-  border: 1px solid;
-  padding: 10px;
-  box-shadow:5px 8px 20px -5px #222;
+   border: 1px solid;
+   padding: 10px;
+   box-shadow:5px 8px 20px -5px #222;
 
  }
 

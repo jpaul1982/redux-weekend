@@ -23,6 +23,17 @@ app.post('/', (req, res) => {
     });
 })
 
+app.get('/admin', (req, res) => {  // creates "get" route
+    pool.query('SELECT * FROM "feedback" ORDER BY "id";') // selects all items from "todo" table, ordered by rank
+        .then((result) => {
+            console.log(result);
+            res.send(result); // gets the rows of response from DB
+        }).catch((error) => {
+            console.log('Error with SELECT tasks query', error);
+            res.sendStatus(500);
+        });
+});
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);
