@@ -11,7 +11,7 @@ class Review extends Component {
         if (this.props.reduxState.feedbackReducer.feeling === "" ||
         this.props.reduxState.feedbackReducer.understanding === "" ||
         this.props.reduxState.feedbackReducer.supported === "" ||
-        this.props.reduxState.feedbackReducer.commments === "" 
+        this.props.reduxState.feedbackReducer.comments === "" 
         ) {
             alert("please fill out all fields");
         } else 

@@ -20,7 +20,7 @@ const feedbackReducer = (state = {}, action) => {
 const adminReducer = (state = [], action) => {
     if (action.type === `SET_ADMIN_PAGE`) {
         console.log(action.payload);
-        return [...state,action.payload];
+        return action.payload;
      } return state;
 }
 const storeInstance = createStore(

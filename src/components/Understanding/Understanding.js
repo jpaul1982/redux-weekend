@@ -9,6 +9,14 @@ class Understanding extends Component {
     }
 
     handleClick = () => {
+        if ( this.state.understanding === '' ) {
+            alert("Please fill out all fields.")
+            return;
+        } else if 
+        (this.state.understanding > 5 || this.state.understanding < 1) {
+            alert("Plese rate betweeen 1 and 5")
+            return ;
+        } else 
         this.props.history.push('/supported') // BRINGS USER TO NEXT PAGE
         this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
         console.log(this.state);

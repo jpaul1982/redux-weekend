@@ -7,6 +7,10 @@ class Comments extends Component {
         comments: ''
     }
     handleClick = () => {
+        if ( this.state.comments === '') {
+            alert("Please fill out all fields.")
+            return;
+        } else 
         this.props.history.push('/review') // BRINGS USER TO NEXT PAGE
         this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })  // dispatches an action that will fire off all reducers. 
         console.log(this.state); 

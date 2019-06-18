@@ -24,10 +24,10 @@ app.post('/', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {  // creates "get" route
-    pool.query('SELECT * FROM "feedback" ORDER BY "id";') // selects all items from "todo" table, ordered by rank
+    pool.query('SELECT * FROM "feedback" ORDER BY "id" DESC;') // selects all items from "todo" table, ordered by rank
         .then((result) => {
             console.log(result);
-            res.send(result); // gets the rows of response from DB
+            res.send(result.rows); 
         }).catch((error) => {
             console.log('Error with SELECT tasks query', error);
             res.sendStatus(500);

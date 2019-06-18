@@ -12,6 +12,14 @@ class Feeling extends Component {
     }
 
     handleClick = () => {
+        if ( this.state.feeling === '' ) {
+            alert("Please fill out all fields.")
+            return;
+        } else if 
+        (this.state.feeling > 5 || this.state.feeling < 1) {
+            alert("Plese rate betweeen 1 and 5")
+            return ;
+        } else 
         this.props.history.push('/understanding'); // BRINGS USER TO NEXT PAGE
         this.props.dispatch({ type: `SUBMIT_FEEDBACK`, payload: this.state })
         console.log(this.state);
