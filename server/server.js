@@ -34,6 +34,16 @@ app.get('/admin', (req, res) => {  // creates "get" route
         });
 });
 
+app.delete('/:id', (req, res) => {
+    pool.query(`DELETE FROM "feedback" WHERE id=$1`, [req.params.id])
+    .then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('Error DELETE /:id', error);
+        res.sendStatus(500);
+    })
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);
